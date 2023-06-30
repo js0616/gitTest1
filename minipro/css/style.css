@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* header */
+#header { position: fixed; top: 0; left: 0; width: 100%; height: 100px; transition: 0.3s; z-index: 9; }
+#header.active { height: 60px; background: #010101; box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+#header .inner { display: flex; justify-content: space-between; align-items: center; height: 100%; padding: 0 80px; }
+#header .hd-logo { font-family: 'Roboto', sans-serif; font-size: 3rem; }
+#header.active .hd-logo { font-size: 2.6rem; }
+
+/* gnb */
+#gnb { display: flex; font-size: 1.8rem; }
+#gnb > ul { display: flex; }
+#gnb > ul > li { margin-left: 40px; }
+#gnb > ul > li > a { position: relative; font-family: 'Roboto', sans-serif; }
+#gnb > ul > li > a::before { content: ""; position: absolute; bottom: -4px; width: 100%; height: 2px; background: #fff; transform: scaleX(0); transform-origin: center center; transition: transform 0.3s; }
+#gnb > ul > li > a:hover::before { transform: scaleX(1); }
+
+/* main */
+section { display: flex; justify-content: center; align-items: center; position: relative; padding: 100px 0 0; }
+#section-1 { padding: 0; height: 100vh; }
+
+.side-board { width: 1400px; padding: 60px; border-radius: 5px; background: #1c1c1c; }
+.tit-sec { font-family: 'Roboto', sans-serif; font-size: 4rem; margin-bottom: 40px; }
+
+/* swiper visual */
+.visual { width: 100%; height: 100%; }
+.visual .swiper-wrapper { transition-timing-function: ease-in-out; }
+.visual .swiper-slide { display: flex; justify-content: center; align-items: center; position: relative; height: 100vh; text-align: center; font-size: 18px; }
+.visual .swiper-slide .slide-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.visual .swiper-slide .slide-tit { position: absolute; font-size: 5rem; transform: translateY(100%); opacity: 0; transition: opacity 0.5s 0.3s, transform 0.5s 0.3s; }
+.visual .swiper-slide-active .slide-tit { transform: translateY(0); opacity: 1; }
+.visual .swiper-button-prev { margin-left: 240px; color: #fff; }
+.visual .swiper-button-next { margin-right: 240px; color: #fff; }
+.visual .swiper-pagination { bottom: 100px; }
+.visual .swiper-pagination-bullet { width: 60px; height: 10px; border-radius: 0; background: #fff; }
+
+/* footer */
+#footer { display: flex; justify-content: center; position: fixed; left: 0; bottom: 0; width: 100%; z-index: 9; }
+#footer .inner { width: 1400px; height: 100%; }
+#footer .copy { padding: 20px 0; font-size: 1.5rem; text-align: center; }
