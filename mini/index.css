@@ -1,0 +1,12 @@
+.s3{
+    background-image: url(./img/01.jpg);
+    background-size: cover;
+}
+
+#img{
+    display: none;
+}
+
+h2{
+    text-align: center;
+}
