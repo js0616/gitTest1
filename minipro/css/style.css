@@ -38,3 +38,21 @@ section { display: flex; justify-content: center; align-items: center; position:
 #footer { display: flex; justify-content: center; position: fixed; left: 0; bottom: 0; width: 100%; z-index: 9; }
 #footer .inner { width: 1400px; height: 100%; }
 #footer .copy { padding: 20px 0; font-size: 1.5rem; text-align: center; }
+
+@media (max-width: 1400px) {
+    .visual .swiper-slide .slide-tit { font-size: 4rem; }
+  }
+  @media (max-width: 1000px) {
+    #header .inner { justify-content: center; padding: 0 40px; }
+    #gnb { display: none; }
+    .visual .swiper-slide .slide-tit { font-size: 3.5rem; }
+    .visual .swiper-button-prev,
+    .visual .swiper-button-next { display: none; }
+  }
+  @media (max-width: 1000px) {
+    #header .inner { justify-content: center; padding: 0 20px; }
+    #gnb { display: none; }
+    .visual .swiper-slide .slide-tit { font-size: 3rem; }
+    .visual .swiper-button-prev,
+    .visual .swiper-button-next { display: none; }
+  }
